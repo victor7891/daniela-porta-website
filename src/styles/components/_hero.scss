@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.home-hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: $color-white;
+    text-align: center;
+
+    h1, h2 {
+        color: $color-primary;
+    }
+
+    .web-title {
+        font-size: 86px;
+        font-weight: 400;
+    }
+
+    .web-subtitle {
+        font-size: 46px;
+        font-weight: 400;
+    }
+}

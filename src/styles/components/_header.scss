@@ -1,0 +1,156 @@
+// ==========================================================================
+// HEADER COMPONENT (BEM)
+// ==========================================================================
+
+@use '../abstracts' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba($color-gray, 0.4);
+  z-index: $z-header;
+  transition: all $transition-base;
+  
+  // Navigation container
+  &__nav {
+    @include container;
+    height: $header-height;
+    @include flex-between;
+    
+    @include mobile-down {
+      height: $header-height-mobile;
+    }
+  }
+  
+  // Brand/Logo
+  &__brand {
+    flex-shrink: 0;
+  }
+  
+  &__brand-link {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-xl;
+    color: $color-secondary;
+    transition: color $transition-base;
+    
+    &:hover {
+      color: $color-primary;
+    }
+    
+    @include mobile-down {
+      font-size: $font-size-lg;
+    }
+  }
+  
+  // Navigation menu
+  &__menu {
+    @include flex-center;
+    gap: $spacing-2xl;
+    margin-bottom: 0;
+    
+    @include mobile-down {
+      position: fixed;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: $color-white;
+      flex-direction: column;
+      padding: $spacing-2xl $spacing-base;
+      gap: $spacing-lg;
+      box-shadow: $shadow-lg;
+      transform: translateY(-100vh);
+      opacity: 0;
+      visibility: hidden;
+      transition: all $transition-base;
+    }
+    
+    // Open state for mobile
+    &--open {
+      @include mobile-down {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  
+  &__menu-item {
+    position: relative;
+    list-style: none;
+    margin-bottom: 0;
+  }
+  
+  &__menu-link {
+    color: $color-text-primary;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-base;
+    padding: $spacing-sm 0;
+    position: relative;
+    transition: color $transition-base;
+    
+    &:hover {
+      color: $color-primary;
+    }
+    
+    // Active state
+    &--active {
+      color: $color-primary;
+    }
+    
+    @include mobile-down {
+      font-size: $font-size-lg;
+      padding: $spacing-md 0;
+      text-align: center;
+      display: block;
+    }
+  }
+  
+  // Mobile toggle button
+  &__toggle {
+    @include button-reset;
+    @include flex-column;
+    gap: 4px;
+    padding: $spacing-sm;
+    display: none;
+    
+    @include mobile-down {
+      display: flex;
+    }
+  }
+  
+  &__toggle-line {
+    width: 25px;
+    height: 2px;
+    background: $color-secondary;
+    transition: all $transition-base;
+    transform-origin: center;
+  }
+  
+  // Toggle animation
+  &__toggle--open {
+    .header__toggle-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translateY(6px);
+      }
+      
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      
+      &:nth-child(3) {
+        transform: rotate(-45deg) translateY(-6px);
+      }
+    }
+  }
+  
+  // Scroll state
+  &--scrolled {
+    background: rgba($color-white, 0.98);
+    border-bottom-color: rgba($color-gray, 0.3);
+    box-shadow: $shadow-sm;
+  }
+}

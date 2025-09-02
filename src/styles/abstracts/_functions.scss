@@ -1,0 +1,49 @@
+// ==========================================================================
+// FUNCTIONS
+// ==========================================================================
+
+@use 'variables' as *;
+
+// Convert pixels to rem
+@function rem($pixels, $base: 16px) {
+  @return ($pixels / $base) * 1rem;
+}
+
+// Get color from theme
+@function color($color-name) {
+  $colors: (
+    'primary': $color-primary,
+    'primary-dark': $color-primary-dark,
+    'primary-light': $color-primary-light,
+    'secondary': $color-secondary,
+    'secondary-dark': $color-secondary-dark,
+    'secondary-light': $color-secondary-light,
+    'accent': $color-accent,
+    'white': $color-white,
+    'black': $color-black,
+    'gray-light': $color-gray-light,
+    'gray': $color-gray,
+    'gray-dark': $color-gray-dark
+  );
+  
+  @return map-get($colors, $color-name);
+}
+
+// Get spacing value
+@function spacing($size) {
+  $spacings: (
+    'xs': $spacing-xs,
+    'sm': $spacing-sm,
+    'md': $spacing-md,
+    'base': $spacing-base,
+    'lg': $spacing-lg,
+    'xl': $spacing-xl,
+    '2xl': $spacing-2xl,
+    '3xl': $spacing-3xl,
+    '4xl': $spacing-4xl,
+    '5xl': $spacing-5xl,
+    '6xl': $spacing-6xl
+  );
+  
+  @return map-get($spacings, $size);
+}
