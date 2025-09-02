@@ -9,11 +9,11 @@ export default function Home() {
             </div>
 
             <Section>
-                <div className="section home__section flex flex-row">
-                    <p>
+                <div className="section-container home__section flex flex-row flex-center">
+                    <p className="flex-basis-75 no-margin">
                         Desde una mirada integral abordaremos tu <span className="circle-text">momento</span> actual y navegaremos juntxs tu periodo de transformación.
                     </p>
-                    <div className="image__home-section-01"/>
+                    <div className="image__home-section-01 window-shaped-image flex-basis-25"/>
                 </div>
             </Section>
         </>

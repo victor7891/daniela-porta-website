@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+.image__home-section-01 {
+    background-image: url('/public/images/daniela-porta.jpg');
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 3/4;
+    border-radius: 50% 50% 0 0/40% 40% 0 0; /* masque arrondi */
+    overflow: hidden;
+}
