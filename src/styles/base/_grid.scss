@@ -1,9 +1,14 @@
+@use '../abstracts' as *;
 
 .container {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 40px;
     width: 100%;
+
+    @media (max-width: #{$breakpoint-sm - 1px}) {
+        padding: 0 20px;
+    }
 }
 
 .container-fluid {

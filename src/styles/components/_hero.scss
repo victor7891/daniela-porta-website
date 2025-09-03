@@ -5,13 +5,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     color: $color-white;
     text-align: center;
     transition: height 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     &.hero-animated {
         height: 800px;
+        max-height: 80vh;
     }
 
     h1, h2 {
