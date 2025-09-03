@@ -1,17 +1,141 @@
 @use '../abstracts' as *;
 
 .home-section__01 {
-    p {
-        font-size: 40px;
+    margin-top: -80px; // To make it appears on home Screen without scrolling
+
+    .image__home-section-01 {
+        background-image: url('/public/images/daniela-porta.jpg');
+        background-size: cover;
+        background-position: center;
+        aspect-ratio: 3/4;
+        border-radius: 50% 50% 0 0/40% 40% 0 0; /* masque arrondi */
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        min-height: 200px;
+        flex-grow: 1;
+
+        // Responsive adjustments
+        @media (max-width: #{$breakpoint-sm - 1px}) {
+            min-height: 250px;
+            min-height: 300px;
+        }
+
+        @media (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md - 1px}) {
+            min-height: 300px;
+        }
+
+        @media (min-width: #{$breakpoint-md}) {
+            min-height: 350px;
+        }
     }
 }
 
-.image__home-section-01 {
-    background-image: url('/public/images/daniela-porta.jpg');
-    flex: 1;
+.home-section__02 {
+    padding: 100px 0 200px 0;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+    z-index: 2;
+
+    > div {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .service-card {
+        flex: 1;
+        ratio: 1 / 1;
+        min-width: 300px;
+        max-width: 300px;
+        text-align: center;
+        justify-content: center;
+
+        img {
+            width: 80%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+
+            aspect-ratio: 3 / 4;
+            border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        hr {
+            width: 80%;
+            height: 2px;
+            margin: 0 auto;
+            background: #6b5759;
+        }
+
+        .service-card__title {
+            margin-top: 24px;
+            font-size: 21px;
+        }
+
+        .service-description {
+            font-size: 16px;
+            margin-top: 24px
+        }
+    }
+}
+
+.image__home-section-03 {
+    background-image: url('/public/images/daniela-porta-02.webp');
     background-size: cover;
     background-position: center;
     aspect-ratio: 3/4;
-    border-radius: 50% 50% 0 0/40% 40% 0 0; /* masque arrondi */
+    border-radius: 50%; /* masque arrondi */
     overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    min-height: 200px;
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 auto;
+
+    // Responsive adjustments
+    @media (max-width: #{$breakpoint-sm - 1px}) {
+        min-height: 250px;
+        min-height: 300px;
+    }
+
+    @media (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md - 1px}) {
+        min-height: 300px;
+    }
+
+    @media (min-width: #{$breakpoint-md}) {
+        min-height: 350px;
+    }
+}
+
+.home-section__contact {
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-top: 40px;
+
+        .contact-info__item {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            justify-content: flex-start;
+            align-items: center;
+
+            p {
+                margin: 0;
+                font-size: 18px;
+            }
+        }
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 24px;
+            height: 24px;
+        }
+    }
 }

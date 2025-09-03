@@ -14,12 +14,12 @@
     }
 
     .web-title {
-        font-size: 86px;
+        font-size: clamp(44px, 4vw, 86px);
         font-weight: 400;
     }
 
     .web-subtitle {
-        font-size: 46px;
+        font-size: clamp(24px, 4vw, 46px);
         font-weight: 400;
     }
 }
