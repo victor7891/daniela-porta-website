@@ -47,15 +47,17 @@
 
             p {
                 flex-basis: 100% !important;
-                order: 1;
             }
 
             .img {
                 flex-basis: 100% !important;
-                order: 2;
                 //max-width: 300px;
                 margin: 0 auto;
                 width: 60%
+            }
+
+            div {
+                align-items: center;
             }
         }
 

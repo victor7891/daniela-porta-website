@@ -8,19 +8,34 @@
     height: 100vh;
     color: $color-white;
     text-align: center;
+    transition: height 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &.hero-animated {
+        height: 800px;
+    }
 
     h1, h2 {
         color: $color-primary;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+        &.text-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .web-title {
-        font-size: clamp(44px, 4vw, 86px);
+        font-size: clamp(44px, 3vw, 86px);
         font-weight: 400;
+        transition-delay: 0.2s;
     }
 
     .web-subtitle {
-        font-size: clamp(24px, 4vw, 46px);
+        font-size: clamp(24px, 2vw, 46px);
         font-weight: 400;
+        transition-delay: 0.4s;
     }
 }
 

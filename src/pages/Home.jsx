@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
 import Section from "../components/Section";
 import ContactHome from "../components/ContactHome.jsx";
+import Button from "../components/Button.jsx";
 
 const SERVICIOS = [
   {
@@ -23,20 +25,49 @@ const SERVICIOS = [
 ]
 
 export default function Home() {
+    const [textVisible, setTextVisible] = useState(false);
+    const [heroAnimated, setHeroAnimated] = useState(false);
+
+    useEffect(() => {
+        // Start text animation after a small delay
+        const textTimer = setTimeout(() => {
+            setTextVisible(true);
+        }, 0);
+
+        // Start hero height transition after text appears
+        const heroTimer = setTimeout(() => {
+            setHeroAnimated(true);
+        }, 200); // 300ms delay + 1500ms for text animation
+
+        return () => {
+            clearTimeout(textTimer);
+            clearTimeout(heroTimer);
+        };
+    }, []);
+
     return (
         <div className="container">
 
-            <div className="home-hero-section">
-                <h1 className="web-title text-center">Daniela Porta</h1>
-                <h2 className="web-subtitle center">Psicología Integrativa</h2>
+            <div className={`home-hero-section ${heroAnimated ? 'hero-animated' : ''}`}>
+                <h1 className={`web-title text-center ${textVisible ? 'text-visible' : ''}`}>
+                    Daniela Porta
+                </h1>
+                <h2 className={`web-subtitle center ${textVisible ? 'text-visible' : ''}`}>
+                    Psicología Integrativa
+                </h2>
             </div>
 
             <Section extraClass="home-section__01 section-linear-white">
                 <div className="section__two-columns gap-40 flex flex-center">
-                    <p className="main-text flex-basis-66 no-margin">
+                    <div className="flex-basis-66 flex flex-column gap-40 sm-order-2">
+                      <p className="main-text no-margin">
                         Desde una mirada integral abordaremos tu <span className="circle-text">momento</span> actual y navegaremos juntxs tu periodo de transformación.
-                    </p>
-                    <div className="img image__home-section-01"/>
+                      </p>
+
+                      <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
+
+                    </div>
+                    <div className="img image__home-section-01 sm-order-1"/>
                 </div>
             </Section>
 
@@ -55,7 +86,7 @@ export default function Home() {
               </div>
             </Section>
 
-            <Section extraClass="home-section__03 section-white home-section__contact">
+            <Section extraClass="home-section__03 section-white home-section__contact" id="home-section__contact">
               <ContactHome />
             </Section>
 
