@@ -14,13 +14,13 @@ const SERVICIOS = [
     title: "Retiros",
     slug: "retiros",
     img: "images/retiros.webp",
-    description: "En estas experiencias inmersivas que realizo junto con otros profesionales integramos el yoga con el autoconocimiento"
+    description: " Experiencias inmersivas donde integramos el yoga con el autoconocimiento"
   },
   {
     title: "Constelaciones Familiares",
     slug: "constelaciones",
     img: "images/constelaciones.webp",
-    description: "Talleres grupales para contactar con el inconsciente familiar y sanar en conjunto"
+    description: "Contáctame para inscribirte en la lista de espera de los próximos talleres"
   }
 ];
 
