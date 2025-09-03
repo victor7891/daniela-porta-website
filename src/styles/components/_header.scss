@@ -153,4 +153,11 @@
     border-bottom-color: rgba($color-gray, 0.3);
     box-shadow: $shadow-sm;
   }
+
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    .button {
+      display: none;
+    }
+  }
+
 }

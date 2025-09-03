@@ -52,7 +52,7 @@ export default function Home() {
                 <h1 className={`web-title text-center ${textVisible ? 'text-visible' : ''}`}>
                     Daniela Porta
                 </h1>
-                <h2 className={`web-subtitle center ${textVisible ? 'text-visible' : ''}`}>
+                <h2 className={`web-subtitle center ${textVisible ? 'text-visible' : ''} no-margin`}>
                     Psicología Integrativa
                 </h2>
             </div>

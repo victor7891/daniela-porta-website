@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Button from './Button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,6 +49,9 @@ const Header = () => {
             Daniela Porta
           </Link>
         </div>
+
+        <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
+
 
         {/* Navigation Menu */}
         {/*}
