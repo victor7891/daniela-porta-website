@@ -57,38 +57,40 @@ export default function Home() {
                 </h2>
             </div>
 
-            <Section extraClass="home-section__01 section-linear-white">
-                <div className="section__two-columns gap-40 flex flex-center">
-                    <div className="flex-basis-66 flex flex-column gap-40 sm-order-2">
-                      <p className="main-text no-margin">
-                        Desde una mirada integral abordaremos tu <span className="circle-text">momento</span> actual y navegaremos juntxs tu periodo de transformación.
-                      </p>
+            <div className={`home-content ${heroAnimated ? 'home-content__visible' : ''}`}>
+                <Section extraClass="home-section__01 section-linear-white">
+                    <div className="section__two-columns gap-40 flex flex-center">
+                        <div className="flex-basis-66 flex flex-column gap-40 sm-order-2">
+                        <p className="main-text no-margin">
+                            Desde una mirada integral abordaremos tu <span className="circle-text">momento</span> actual y navegaremos juntxs tu periodo de transformación.
+                        </p>
 
-                      <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
+                        <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
 
+                        </div>
+                        <div className="img image__home-section-01 sm-order-1"/>
                     </div>
-                    <div className="img image__home-section-01 sm-order-1"/>
+                </Section>
+
+                <Section title="Servicios" extraClass="home-section__02">
+                <div className="container section-container flex">
+                    {SERVICIOS.map((service) => {
+                    return (
+                        <div className="service-card" key={service.slug}>
+                        <img src={service.img} alt=""/>
+                        <p className="service-card__title">{service.title}</p>
+                        <hr/>
+                        <p className="service-description">{service.description}</p>
+                        </div>
+                    );
+                    })}
                 </div>
-            </Section>
+                </Section>
 
-            <Section title="Servicios" extraClass="home-section__02">
-              <div className="container gap-40 section-container flex">
-                {SERVICIOS.map((service) => {
-                  return (
-                    <div className="service-card" key={service.slug}>
-                      <img src={service.img} alt=""/>
-                      <p className="service-card__title">{service.title}</p>
-                      <hr/>
-                      <p className="service-description">{service.description}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </Section>
-
-            <Section extraClass="home-section__03 section-white home-section__contact" id="home-section__contact">
-              <ContactHome />
-            </Section>
+                <Section extraClass="home-section__03 section-white home-section__contact" id="home-section__contact">
+                <ContactHome />
+                </Section>
+            </div>
 
         </div>
     )
