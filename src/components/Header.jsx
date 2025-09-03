@@ -50,6 +50,7 @@ const Header = () => {
         </div>
 
         {/* Navigation Menu */}
+        {/*}
         <ul className={`header__menu ${isMenuOpen ? 'header__menu--open' : ''}`}>
           <li className="header__menu-item">
             <Link 
@@ -90,6 +91,7 @@ const Header = () => {
         </ul>
 
         {/* Mobile Menu Toggle */}
+        {/* 
         <button 
           className={`header__toggle ${isMenuOpen ? 'header__toggle--open' : ''}`}
           onClick={toggleMenu}
@@ -100,6 +102,7 @@ const Header = () => {
           <span className="header__toggle-line"></span>
           <span className="header__toggle-line"></span>
         </button>
+        */}
       </nav>
     </header>
   );

@@ -153,6 +153,10 @@
             object-position: center;
             width: 24px;
             height: 24px;
+
+            @media (max-width: #{$breakpoint-sm - 1px}) {
+                display: none;
+            }
         }
     }
 }

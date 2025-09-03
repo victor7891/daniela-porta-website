@@ -12,13 +12,15 @@ export default function ContactHome() {
         <hr/>
 
         <div className="contact-info">
-          <p><b><i>@danielaportapsic</i></b></p>
+          <a href="https://www.instagram.com/danielaportapsic" target="_blank"><b><i>@danielaportapsic</i></b></a>
 
           <div className="contact-info__item flex">
             <img src="images/icons/phone.svg" alt=""/>
             <div>
               <p>WHATSAPP</p>
-              <p>+ 34 666 640 595 </p>
+              <a href="https://wa.me/34666640595">
+                + 34 666 640 595
+              </a>
             </div>
           </div>
 

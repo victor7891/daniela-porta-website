@@ -22,7 +22,7 @@ const SERVICIOS = [
     img: "images/constelaciones.webp",
     description: "Talleres grupales para contactar con el inconsciente familiar y sanar en conjunto"
   }
-]
+];
 
 export default function Home() {
     const [textVisible, setTextVisible] = useState(false);
