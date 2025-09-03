@@ -12,6 +12,12 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
+    // Reset scroll position on page load/refresh
+    window.scrollTo(0, 0);
+    
+    // Check initial scroll position on mount
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

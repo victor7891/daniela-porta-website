@@ -1,5 +1,11 @@
 @use '../abstracts' as *;
 
+.home-section__01 {
+    p {
+        font-size: 40px;
+    }
+}
+
 .image__home-section-01 {
     background-image: url('/public/images/daniela-porta.jpg');
     flex: 1;

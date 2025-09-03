@@ -1,1 +1,249 @@
+// Layout Container System
+// Responsive container system based on the provided CSS
 
+// Breakpoints
+$breakpoints: (
+        sm: 36rem,    // 576px
+        md: 48rem,    // 768px
+        lg: 62rem,    // 992px
+        xl: 75rem,    // 1200px
+        xxl: 87.5rem, // 1400px
+        xxxl: 100rem  // 1600px
+);
+
+// Mixins for media queries
+@mixin media($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin media-max($size) {
+  @media not all and (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// Container base styles
+%container-base {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: none;
+  padding-left: clamp(1rem, -0.04rem + 2.88vw, 4rem);
+  padding-right: clamp(1rem, -0.04rem + 2.88vw, 4rem);
+}
+
+// Main container classes
+.container,
+.es-auth,
+.es-properties,
+.es-single,
+.es-wrap {
+  @extend %container-base;
+
+  @include media(xxl) {
+    max-width: 83rem; // 1328px
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include media(xxxl) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  // Smaller variant
+  &.smaller {
+    @include media(lg) {
+      padding-left: 11rem;
+      padding-right: 11rem;
+    }
+  }
+}
+
+// Container fluid for specific components
+.container-fluid {
+  width: 100%;
+
+  @include media-max(lg) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+// Property-specific containers
+.es-properties__container {
+  @extend %container-base;
+
+  @include media(xxl) {
+    max-width: 83rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include media(xxxl) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  &.smaller {
+    @include media(lg) {
+      padding-left: 11rem;
+      padding-right: 11rem;
+    }
+  }
+
+  // Special layout for property pages
+  display: flex;
+  height: 100%;
+  width: 100%;
+  gap: 2rem;
+
+  @include media-max(lg) {
+    flex-direction: column;
+  }
+}
+
+// Calculator-specific container
+.content-calculator .es-properties__container,
+.property-archive .es-properties__container {
+  @extend %container-base;
+
+  @include media(xxl) {
+    max-width: 83rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include media(xxxl) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  &.smaller {
+    @include media(lg) {
+      padding-left: 11rem;
+      padding-right: 11rem;
+    }
+  }
+
+  display: flex;
+  height: 100%;
+  width: 100%;
+  gap: 2rem;
+
+  @include media-max(lg) {
+    flex-direction: column;
+  }
+}
+
+// Utility classes for container variations
+.container-narrow {
+  @extend %container-base;
+
+  @include media(lg) {
+    max-width: 60rem;
+  }
+}
+
+.container-wide {
+  @extend %container-base;
+
+  @include media(xxl) {
+    max-width: 100rem; // 1600px
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include media(xxxl) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+// Grid container for layout
+.container-grid {
+  @extend %container-base;
+  display: grid;
+
+  @include media(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media(xxl) {
+    max-width: 83rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include media(xxxl) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+// Section containers with spacing
+.section-container {
+  @extend %container-base;
+
+  // Section top spacing
+  &.st-xxl { padding-top: clamp(4rem, 2.62rem + 3.85vw, 8rem); }
+  &.st-xl { padding-top: clamp(3.5rem, 2.63rem + 2.4vw, 6rem); }
+  &.st-lg { padding-top: clamp(3rem, 2.31rem + 1.92vw, 5rem); }
+  &.st-md { padding-top: clamp(2.5rem, 1.98rem + 1.44vw, 4rem); }
+  &.st-sm { padding-top: clamp(1.5rem, 1.15rem + 0.96vw, 2.5rem); }
+  &.st-xs { padding-top: clamp(1rem, 0.83rem + 0.48vw, 1.5rem); }
+  &.st-xxs { padding-top: 0.75rem; }
+  &.st-none { padding-top: 0 !important; }
+
+  // Section bottom spacing
+  &.sb-xxl { padding-bottom: clamp(4rem, 2.62rem + 3.85vw, 8rem); }
+  &.sb-xl { padding-bottom: clamp(3.5rem, 2.63rem + 2.4vw, 6rem); }
+  &.sb-lg { padding-bottom: clamp(3rem, 2.31rem + 1.92vw, 5rem); }
+  &.sb-md { padding-bottom: clamp(2.5rem, 1.98rem + 1.44vw, 4rem); }
+  &.sb-sm { padding-bottom: clamp(1.5rem, 1.15rem + 0.96vw, 2.5rem); }
+  &.sb-xs { padding-bottom: clamp(1rem, 0.83rem + 0.48vw, 1.5rem); }
+  &.sb-xxs { padding-bottom: 0.75rem; }
+  &.sb-none { padding-bottom: 0 !important; }
+
+  @include media(xxl) {
+    max-width: 83rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include media(xxxl) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+// Debug helper (remove in production)
+@if false { // Set to true for debugging
+  .container,
+  .es-auth,
+  .es-properties,
+  .es-single,
+  .es-wrap,
+  .container-fluid,
+  .es-properties__container {
+    outline: 1px solid red;
+    position: relative;
+
+    &::before {
+      content: attr(class);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: red;
+      color: white;
+      font-size: 10px;
+      padding: 2px 4px;
+      z-index: 9999;
+    }
+  }
+}

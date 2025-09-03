@@ -31,7 +31,7 @@ const SobreMi = () => (
 function App() {
   return (
     <Router>
-      <div className="App container">
+      <div className="App">
         <Header />
         <main className="main-content">
           <Routes>
