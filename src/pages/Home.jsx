@@ -17,10 +17,10 @@ const SERVICIOS = [
     description: " Experiencias inmersivas donde integramos el yoga con el autoconocimiento"
   },
   {
-    title: "Constelaciones Familiares",
-    slug: "constelaciones",
-    img: "images/constelaciones.webp",
-    description: "Contáctame para inscribirte en la lista de espera de los próximos talleres"
+    title: "Talleres y eventos",
+    slug: "talleres-y-eventos",
+    img: "images/talleres-y-eventos.jpg",
+    description: "Experiencias de conexión y aprendizaje colectivo"
   }
 ];
 
