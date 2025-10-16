@@ -3,19 +3,15 @@ export default function ContactHome() {
     <div className="section__two-columns gap-40 flex flex-center flex-between">
       <div className="flex-grow flex-basis-50 no-margin">
         <p className="main-text">
-          ¿Trabajamos juntxs?
+          Contáctame para una sesión online o presencial en Barcelona
         </p>
-        <p className="main-text">
-          Contactame para una sesión
-        </p>
-
         <hr/>
 
         <div className="contact-info">
-          <a href="https://www.instagram.com/danielaportapsic" target="_blank"><b><i>@danielaportapsic</i></b></a>
+          <a href="https://www.instagram.com/danielaportapsic" target="_blank"><b><i>@danielaportapsicologa</i></b></a>
 
           <div className="contact-info__item flex">
-            <img src="images/icons/phone.svg" alt=""/>
+            <img src="images/icons/phone.svg" alt="telefono"/>
             <div>
               <p>WHATSAPP</p>
               <a href="https://wa.me/34666640595">
@@ -25,7 +21,7 @@ export default function ContactHome() {
           </div>
 
           <div className="contact-info__item flex">
-            <img src="images/icons/correos.svg" alt=""/>
+            <img src="images/icons/correos.svg" alt="correo electronico"/>
             <div>
               <p>Correo</p>
               <p>danielaportapsicologa@gmail.com</p>

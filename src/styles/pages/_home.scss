@@ -101,7 +101,7 @@
 }
 
 .image__home-section-03 {
-    background-image: url('/public/images/daniela-porta-02.webp');
+    background-image: url('/public/images/daniela-porta-02.jpg');
     background-size: cover;
     background-position: center;
     aspect-ratio: 3/4;
@@ -129,6 +129,10 @@
 }
 
 .home-section__contact {
+    .main-text {
+        margin-bottom: 40px;
+    }
+
     .contact-info {
         display: flex;
         flex-direction: column;

@@ -11,16 +11,16 @@ const SERVICIOS = [
     description: "Sesiones online y presenciales en Barcelona"
   },
   {
-    title: "Retiros",
-    slug: "retiros",
-    img: "images/retiros.webp",
-    description: " Experiencias inmersivas donde integramos el yoga con el autoconocimiento"
-  },
-  {
     title: "Talleres y eventos",
     slug: "talleres-y-eventos",
     img: "images/talleres-y-eventos.jpg",
     description: "Experiencias de conexión y aprendizaje colectivo"
+  },
+  {
+    title: "Retiros",
+    slug: "retiros",
+    img: "images/retiros.jpg",
+    description: "Experiencias inmersivas donde integramos el yoga con el autoconocimiento"
   }
 ];
 
@@ -62,7 +62,7 @@ export default function Home() {
                     <div className="section__two-columns gap-40 flex flex-center">
                         <div className="flex-basis-66 flex flex-column gap-40 sm-order-2">
                         <p className="main-text no-margin">
-                        Te ofrezco un espacio terapéutico donde procesar tus experiencias, conectar con tu <span className="circle-text">presente</span> y navegar con gentileza tu periodo de cambio y transformación
+                            Te ofrezco un espacio terapéutico donde procesar tus experiencias, conectar con tu <span className="circle-text">presente</span> y navegar con gentileza tu periodo de cambio y transformación
                         </p>
 
                         <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
