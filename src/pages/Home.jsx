@@ -53,7 +53,7 @@ export default function Home() {
                     Daniela Porta
                 </h1>
                 <h2 className={`web-subtitle center ${textVisible ? 'text-visible' : ''} no-margin`}>
-                    Psicología Integrativa
+                    Terapeuta
                 </h2>
             </div>
 
@@ -62,7 +62,7 @@ export default function Home() {
                     <div className="section__two-columns gap-40 flex flex-center">
                         <div className="flex-basis-66 flex flex-column gap-40 sm-order-2">
                         <p className="main-text no-margin">
-                            Desde una mirada integral abordaremos tu <span className="circle-text">momento</span> actual y navegaremos juntxs tu periodo de transformación.
+                        Te ofrezco un espacio terapéutico donde procesar tus experiencias, conectar con tu <span className="circle-text">presente</span> y navegar con gentileza tu periodo de cambio y transformación
                         </p>
 
                         <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
