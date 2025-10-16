@@ -9,6 +9,38 @@
     }
 }
 
+@keyframes draw-circle {
+    from {
+        stroke-dashoffset: 2000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.circle-text-scribbe {
+    position: relative;
+    display: inline-block;
+    
+    .circle-svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120%;
+        height: auto;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.8;
+        
+        .circle-path {
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: draw-circle .8s ease-out 0.8s forwards;
+        }
+    }
+}
+
 .home-section__01 {
     margin-top: -80px; // To make it appears on home Screen without scrolling
 

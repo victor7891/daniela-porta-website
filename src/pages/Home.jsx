@@ -55,6 +55,7 @@ export default function Home() {
                 <h2 className={`web-subtitle center ${textVisible ? 'text-visible' : ''} no-margin`}>
                     Terapeuta
                 </h2>
+                <h3>Acompaño procesos de cambio y transiciones vitales desde una mirada holística</h3>  
             </div>
 
             <div className={`home-content ${heroAnimated ? 'home-content__visible' : ''}`}>
@@ -62,7 +63,14 @@ export default function Home() {
                     <div className="section__two-columns gap-40 flex flex-center">
                         <div className="flex-basis-66 flex flex-column gap-40 sm-order-2">
                         <p className="main-text no-margin">
-                            Te ofrezco un espacio terapéutico donde procesar tus experiencias, conectar con tu <span className="circle-text">presente</span> y navegar con gentileza tu periodo de cambio y transformación
+                            Te ofrezco un espacio terapéutico donde procesar tus experiencias, conectar con tu{' '}
+                            <span className="circle-text-scribbe">
+                                presente
+                                <svg className="circle-svg" viewBox="0 0 700.53 274.25" xmlns="http://www.w3.org/2000/svg">
+                                    <path className="circle-path" d="M232.98,248.71s348.2.91,439.66-95.09S599.74-3.5,391,2.39,13.4,70.31,2.51,152.26s155.31,119.99,288.88,119.99,254.02-13.13,371.29-74.71" fill="none" stroke="#6b5759" strokeMiterlimit="10" strokeWidth="6"/>
+                                </svg>
+                            </span>{' '}
+                            y navegar con gentileza tu periodo de cambio y transformación
                         </p>
 
                         <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
