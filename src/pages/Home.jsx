@@ -49,21 +49,29 @@ export default function Home() {
         <div className="container">
 
             <div className={`home-hero-section ${heroAnimated ? 'hero-animated' : ''}`}>
-                <h1 className={`web-title text-center ${textVisible ? 'text-visible' : ''}`}>
-                    Daniela Porta
-                </h1>
-                <h2 className={`web-subtitle center ${textVisible ? 'text-visible' : ''} no-margin`}>
-                    Terapeuta
-                </h2>
-                <h3>Acompaño procesos de cambio y transiciones vitales desde una mirada holística</h3>  
+                <div className="hero-identity">
+                    <div className="hero-identity__text">
+                        <h2 className={`web-subtitle ${textVisible ? 'text-visible' : ''} no-margin`}>
+                            Psicologa & Terapeuta
+                        </h2>
+                        <h1 className={`web-title ${textVisible ? 'text-visible' : ''}`}>
+                            Daniela Porta
+                        </h1>
+                    
+                        <p className={`hero-tagline ${textVisible ? 'text-visible' : ''}`}>
+                            Acompaño procesos de cambio y transiciones vitales desde una mirada integrativa
+                        </p>
+                        <Button text="Conocer más" extraClass="secondary" link="#home-section__01"/>
+                    </div>
+                    <div className={`hero-content__image ${textVisible ? 'image-visible' : ''}`}/>
+                </div>
+
             </div>
 
             <div className={`home-content ${heroAnimated ? 'home-content__visible' : ''}`}>
-                <Section extraClass="home-section__01 section-linear-white">
-                    <div className="section__two-columns gap-40 flex flex-center">
-                        <div className="flex-basis-66 flex flex-column gap-40 sm-order-2">
-                        <p className="main-text no-margin">
-                            Te ofrezco un espacio terapéutico donde procesar tus experiencias, conectar con tu{' '}
+                <Section extraClass="home-section__01 section-white" id="home-section__01">
+                    <p className="main-text no-margin text-center">
+                            Ofrezco un espacio terapéutico donde procesar tus experiencias, conectar con tu{' '}
                             <span className="circle-text-scribbe">
                                 presente
                                 <svg className="circle-svg" viewBox="0 0 700.53 274.25" xmlns="http://www.w3.org/2000/svg">
@@ -71,32 +79,27 @@ export default function Home() {
                                 </svg>
                             </span>{' '}
                             y navegar con gentileza tu periodo de cambio y transformación
-                        </p>
-
-                        <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
-
-                        </div>
-                        <div className="img image__home-section-01 sm-order-1"/>
-                    </div>
+                    </p>
+                    <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
                 </Section>
 
                 <Section title="Servicios" extraClass="home-section__02">
-                <div className="container section-container flex">
-                    {SERVICIOS.map((service) => {
-                    return (
-                        <div className="service-card" key={service.slug}>
-                        <img src={service.img} alt=""/>
-                        <p className="service-card__title">{service.title}</p>
-                        <hr/>
-                        <p className="service-description">{service.description}</p>
-                        </div>
-                    );
-                    })}
-                </div>
+                    <div className="container section-container flex">
+                        {SERVICIOS.map((service) => {
+                        return (
+                            <div className="service-card" key={service.slug}>
+                            <img src={service.img} alt=""/>
+                            <p className="service-card__title">{service.title}</p>
+                            <hr/>
+                            <p className="service-description">{service.description}</p>
+                            </div>
+                        );
+                        })}
+                    </div>
                 </Section>
 
                 <Section extraClass="home-section__03 section-white home-section__contact" id="home-section__contact">
-                <ContactHome />
+                    <ContactHome />
                 </Section>
             </div>
 

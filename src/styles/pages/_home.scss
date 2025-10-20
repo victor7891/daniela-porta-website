@@ -9,6 +9,7 @@
     }
 }
 
+// Circle scribble animation for emphasized text
 @keyframes draw-circle {
     from {
         stroke-dashoffset: 2000;
@@ -36,47 +37,13 @@
         .circle-path {
             stroke-dasharray: 2000;
             stroke-dashoffset: 2000;
-            animation: draw-circle .8s ease-out 0.8s forwards;
+            animation: draw-circle 1s ease-out 1.8s forwards;
         }
     }
 }
 
 .home-section__01 {
-    margin-top: -80px; // To make it appears on home Screen without scrolling
-
-    .image__home-section-01 {
-        background-image: url('/public/images/daniela-porta-04.png');
-        background-size: cover;
-        background-position: center;
-        aspect-ratio: 3/4;
-        border-radius: 50% 50% 0 0/40% 40% 0 0; /* masque arrondi */
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        min-height: 200px;
-        flex-grow: 1;
-
-        // Responsive adjustments
-        @media (max-width: #{$breakpoint-sm - 1px}) {
-            min-height: 250px;
-            min-height: 300px;
-
-            div {
-                align-items: center;
-            }
-        }
-
-        @media (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md - 1px}) {
-            min-height: 300px;
-        }
-
-        @media (min-width: #{$breakpoint-md}) {
-            min-height: 350px;
-        }
-    }
-
-    a.button {
-        order: 2;
-    }
+    border-radius: 50px;
 }
 
 .home-section__02 {
@@ -137,7 +104,8 @@
     background-size: cover;
     background-position: center;
     aspect-ratio: 3/4;
-    border-radius: 50%; /* masque arrondi */
+    //border-radius: 50%; /* masque arrondi */
+    border-radius: 16px;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     min-height: 200px;

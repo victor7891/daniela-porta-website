@@ -30,4 +30,8 @@ a.button {
     &:active {
       transform: translateY(0);
     }
+
+    &.secondary {
+      background-color: white;
+    }
   }
