@@ -1,6 +1,6 @@
 export default function ContactHome() {
   return (
-    <div className="section__two-columns gap-40 flex flex-center flex-between">
+    <div className="section__two-columns gap-80 flex flex-center flex-between">
       <div className="flex-grow flex-basis-50 no-margin">
         <p className="main-text">
           Contáctame para una sesión online o presencial en Barcelona

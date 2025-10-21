@@ -13,12 +13,15 @@
   border-bottom: 1px solid rgba($color-gray, 0.4);
   z-index: $z-header;
   transition: all $transition-base;
+  height: 80px;
   
   // Navigation container
   &__nav {
     @include container;
     height: $header-height;
     @include flex-between;
+    padding:0 40px;
+
     
     @include mobile-down {
       height: $header-height-mobile;

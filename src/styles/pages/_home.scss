@@ -2,10 +2,12 @@
 
 .home-content {
     opacity: 0;
-    transition: opacity 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 
     &.home-content__visible {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -111,7 +113,7 @@
     min-height: 200px;
     flex-grow: 1;
     max-width: 400px;
-    margin: 0 auto;
+    //margin: 0 auto;
 
     // Responsive adjustments
     @media (max-width: #{$breakpoint-sm - 1px}) {

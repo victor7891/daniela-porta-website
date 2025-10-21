@@ -29,15 +29,15 @@ export default function Home() {
     const [heroAnimated, setHeroAnimated] = useState(false);
 
     useEffect(() => {
-        // Start text animation after a small delay
+        // Start text animation immediately
         const textTimer = setTimeout(() => {
             setTextVisible(true);
-        }, 0);
+        }, 100);
 
-        // Start hero height transition after text appears
+        // Start home-section__01 animation shortly after hero
         const heroTimer = setTimeout(() => {
             setHeroAnimated(true);
-        }, 200); // 300ms delay + 1500ms for text animation
+        }, 500);
 
         return () => {
             clearTimeout(textTimer);
@@ -61,7 +61,9 @@ export default function Home() {
                         <p className={`hero-tagline ${textVisible ? 'text-visible' : ''}`}>
                             Acompaño procesos de cambio y transiciones vitales desde una mirada integrativa
                         </p>
-                        <Button text="Conocer más" extraClass="secondary" link="#home-section__01"/>
+                        <div className={`button-wrapper ${textVisible ? 'text-visible' : ''}`}>
+                            <Button text="Conocer más" extraClass="cononcer-mas__button" link="#home-section__01"/>
+                        </div>
                     </div>
                     <div className={`hero-content__image ${textVisible ? 'image-visible' : ''}`}/>
                 </div>

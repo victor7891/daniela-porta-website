@@ -40,6 +40,7 @@
     .hero-identity__text {
         flex: 1;
         max-width: 650px;
+        margin: 80px 0;
 
         @media (max-width: #{$breakpoint-md - 1px}) {
             text-align: center;
@@ -47,11 +48,11 @@
         }
     }
 
-    h1, h2, .hero-tagline {
+    h1, h2, .hero-tagline, .button-wrapper {
         color: $color-primary;
         opacity: 0;
-        transform: translateY(30px);
-        transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform: translateY(20px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 
         &.text-visible {
             opacity: 1;
@@ -63,15 +64,16 @@
         font-size: clamp(44px, 5vw, 86px);
         font-weight: 400;
         margin-bottom: 8px;
-        transition-delay: 0.2s;
     }
 
     .web-subtitle {
         font-size: clamp(24px, 3vw, 32px);
         font-weight: 400;
         margin-bottom: 16px;
-        transition-delay: 0.4s;
-        opacity: .8;
+        
+        &.text-visible {
+            opacity: .8;
+        }
     }
 
     .hero-tagline {
@@ -80,7 +82,6 @@
         line-height: 1.5;
         color: $color-secondary-dark;
         margin: 0;
-        transition-delay: 0.6s;
     }
 
     // Content section (main text + image)
@@ -136,9 +137,8 @@
         width: 380px;
         min-height: 450px;
         opacity: 0;
-        transform: translateY(30px);
-        transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        transition-delay: 0.8s;
+        transform: translateY(20px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 
         &.image-visible {
             opacity: 1;
@@ -152,7 +152,7 @@
         }
 
         @media (max-width: #{$breakpoint-sm - 1px}) {
-            max-width: 280px;
+            max-width: 400px;
             min-height: 340px;
         }
     }
