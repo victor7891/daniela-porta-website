@@ -8,7 +8,7 @@ export default function ContactHome() {
         <hr/>
 
         <div className="contact-info">
-          <a href="https://www.instagram.com/danielaportapsic" target="_blank"><b><i>@danielaportapsicologa</i></b></a>
+          <a href="https://www.instagram.com/danielaportapsicologa/" target="_blank"><b><i>@danielaportapsicologa</i></b></a>
 
           <div className="contact-info__item flex">
             <img src="images/icons/phone.svg" alt="telefono"/>

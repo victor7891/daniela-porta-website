@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="hero-identity">
                     <div className="hero-identity__text">
                         <h2 className={`web-subtitle ${textVisible ? 'text-visible' : ''} no-margin`}>
-                            Psicologa & Terapeuta
+                            Psicóloga & Terapeuta
                         </h2>
                         <h1 className={`web-title ${textVisible ? 'text-visible' : ''}`}>
                             Daniela Porta
