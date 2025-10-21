@@ -51,16 +51,17 @@ export default function Home() {
             <div className={`home-hero-section ${heroAnimated ? 'hero-animated' : ''}`}>
                 <div className="hero-identity">
                     <div className="hero-identity__text">
-                        <h2 className={`web-subtitle ${textVisible ? 'text-visible' : ''} no-margin`}>
-                            Psicóloga & Terapeuta
-                        </h2>
-                        <h1 className={`web-title ${textVisible ? 'text-visible' : ''}`}>
-                            Daniela Porta
-                        </h1>
-                    
-                        <p className={`hero-tagline ${textVisible ? 'text-visible' : ''}`}>
-                            Acompaño procesos de cambio y transiciones vitales desde una mirada integrativa
-                        </p>
+                        <h3 className={`webtitle__tagline no-margin ${textVisible ? 'text-visible' : ''}`}>
+                            Ofrezco un espacio terapéutico donde procesar tus experiencias, conectar con tu{' '}
+                            <span className="circle-text-scribbe">
+                                presente
+                                <svg className="circle-svg" viewBox="0 0 700.53 274.25" xmlns="http://www.w3.org/2000/svg">
+                                    <path className="circle-path" d="M232.98,248.71s348.2.91,439.66-95.09S599.74-3.5,391,2.39,13.4,70.31,2.51,152.26s155.31,119.99,288.88,119.99,254.02-13.13,371.29-74.71" fill="none" stroke="#6b5759" strokeMiterlimit="10" strokeWidth="6"/>
+                                </svg>
+                            </span>{' '}
+                            y navegar con gentileza tu periodo de cambio y transformación
+                        </h3>
+
                         <div className={`button-wrapper ${textVisible ? 'text-visible' : ''}`}>
                             <Button text="Conocer más" extraClass="cononcer-mas__button" link="#home-section__01"/>
                         </div>
@@ -73,14 +74,7 @@ export default function Home() {
             <div className={`home-content ${heroAnimated ? 'home-content__visible' : ''}`}>
                 <Section extraClass="home-section__01 section-white" id="home-section__01">
                     <p className="main-text no-margin text-center">
-                            Ofrezco un espacio terapéutico donde procesar tus experiencias, conectar con tu{' '}
-                            <span className="circle-text-scribbe">
-                                presente
-                                <svg className="circle-svg" viewBox="0 0 700.53 274.25" xmlns="http://www.w3.org/2000/svg">
-                                    <path className="circle-path" d="M232.98,248.71s348.2.91,439.66-95.09S599.74-3.5,391,2.39,13.4,70.31,2.51,152.26s155.31,119.99,288.88,119.99,254.02-13.13,371.29-74.71" fill="none" stroke="#6b5759" strokeMiterlimit="10" strokeWidth="6"/>
-                                </svg>
-                            </span>{' '}
-                            y navegar con gentileza tu periodo de cambio y transformación
+                        Acompaño procesos de cambio y transiciones vitales desde una mirada integrativa
                     </p>
                     <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
                 </Section>

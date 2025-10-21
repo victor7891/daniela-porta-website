@@ -13,7 +13,8 @@
   border-bottom: 1px solid rgba($color-gray, 0.4);
   z-index: $z-header;
   transition: all $transition-base;
-  height: 80px;
+  height: 100px;
+  background-color: $color-white;
   
   // Navigation container
   &__nav {
@@ -21,6 +22,7 @@
     height: $header-height;
     @include flex-between;
     padding:0 40px;
+    justify-content: center;
 
     
     @include mobile-down {
@@ -31,14 +33,31 @@
   // Brand/Logo
   &__brand {
     flex-shrink: 0;
+    text-align: center;
   }
   
-  &__brand-link {
+  &__brand-link h1 {
     font-family: $font-family-primary;
     font-weight: $font-weight-semibold;
-    font-size: $font-size-xl;
-    color: $color-secondary;
-    transition: color $transition-base;
+    font-size: $font-size-2xl;
+    margin: 0;
+    //color: $color-secondary;
+    //transition: color $transition-base;
+    
+    &:hover {
+      color: $color-primary;
+    }
+    
+    @include mobile-down {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__brand-subtitle {
+    margin: 8px 0 0 0;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-lg;
     
     &:hover {
       color: $color-primary;

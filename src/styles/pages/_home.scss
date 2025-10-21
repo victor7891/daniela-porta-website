@@ -39,13 +39,17 @@
         .circle-path {
             stroke-dasharray: 2000;
             stroke-dashoffset: 2000;
-            animation: draw-circle 1s ease-out 1.8s forwards;
+            animation: draw-circle .4s ease-out .4s forwards;
         }
     }
 }
 
 .home-section__01 {
     border-radius: 50px;
+
+    p.main-text {
+       max-width: 720px;
+    }
 }
 
 .home-section__02 {

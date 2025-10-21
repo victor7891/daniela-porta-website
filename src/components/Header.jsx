@@ -43,14 +43,15 @@ const Header = () => {
         <div className="header__brand">
           <Link 
             to="/" 
-            className="header__brand-link" 
+            className="header__brand-link text-center" 
             onClick={closeMenu}
           >
-            Daniela Porta
+            <h1>Daniela Porta</h1>
           </Link>
+          <h2 className='header__brand-subtitle'>Psicóloga & Terapeuta</h2>
         </div>
 
-        <Button text="Agenda tu primera sesión" link="#home-section__contact"/>
+        {/*<Button text="Agenda tu primera sesión" link="#home-section__contact"/>*/}
 
 
         {/* Navigation Menu */}
