@@ -48,7 +48,7 @@ const Header = () => {
           >
             <h1>Daniela Porta</h1>
           </Link>
-          <h2 className='header__brand-subtitle'>Psicóloga & Terapeuta</h2>
+          <h2 className='header__brand-subtitle'>Psico-terapeuta</h2>
         </div>
 
         {/*<Button text="Agenda tu primera sesión" link="#home-section__contact"/>*/}
